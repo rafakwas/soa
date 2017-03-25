@@ -1,6 +1,5 @@
-package com.agh.edu.pl.soa.lab1.zadanie6;
+package com.agh.edu.pl.soa.lab3.zadanie1;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -8,7 +7,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
 
 @WebServlet(name = "WyborPiwa")
 public class WyborPiwa extends HttpServlet {

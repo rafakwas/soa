@@ -1,7 +1,7 @@
-<%@ page import="com.agh.edu.pl.soa.lab1.zadanie5.Validation" %>
+<%@ page import="com.agh.edu.pl.soa.lab2.zadanie5.Validation" %>
 <%@ page import="java.io.PrintWriter" %>
 <%@ page import="java.util.Vector" %>
-<%@ page import="com.agh.edu.pl.soa.lab1.zadanie5.UserFeedback" %>
+<%@ page import="com.agh.edu.pl.soa.lab2.zadanie5.UserFeedback" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -26,7 +26,7 @@
 
 <body>
 <b>Please submit your feedback:</b>
-<form method="post" action="book">
+<form method="post" action="/lab2/zadanie5/book">
     Your name: <input type="text" name="login"> <br/>
     Your email: <input type="text" name="email"><br/>
     Comment: <input type="text" name="comment"> <br/>

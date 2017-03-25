@@ -12,7 +12,7 @@
   </head>
 
   <body>
-  <form method="post" action="/hello/zadanie4">
+  <form method="post" action="/lab2/zadanie4">
     Przedział cenowy: <input type="text" title="Przedzial cenowy" name="range"> <br/>
     Rodzaj samochodu: <select name="type">
     <option value="sport">sportowy</option>

@@ -1,4 +1,4 @@
-package com.agh.edu.pl.soa.lab1.zadanie5;
+package com.agh.edu.pl.soa.lab2.zadanie5;
 
 public class UserFeedback {
     private String login;

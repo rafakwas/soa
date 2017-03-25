@@ -1,4 +1,4 @@
-package com.agh.edu.pl.soa.lab1.zadanie1;
+package com.agh.edu.pl.soa.lab2.zadanie1;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -8,7 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-@WebServlet(name = "/test")
+@WebServlet(name = "helloTest", urlPatterns = {"lab2/zadanie1"})
 public class TestServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

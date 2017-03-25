@@ -1,6 +1,6 @@
-package com.agh.edu.pl.soa.lab1.zadanie4;
+package com.agh.edu.pl.soa.lab2.zadanie4;
 
-import com.agh.edu.pl.soa.lab1.zadanie4.car.CarChoiceHelper;
+import com.agh.edu.pl.soa.lab2.zadanie4.car.CarChoiceHelper;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,7 +12,7 @@ import java.io.PrintWriter;
 import java.util.Enumeration;
 import java.util.List;
 
-@WebServlet(name = "CarChoiceServlet")
+@WebServlet(name = "CarChoiceServlet", urlPatterns = {"lab2/zadanie4"})
 public class CarChoiceServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request,response);

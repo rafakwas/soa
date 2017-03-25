@@ -1,17 +1,14 @@
-package com.agh.edu.pl.soa.lab1.zadanie5;
+package com.agh.edu.pl.soa.lab2.zadanie5;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.Vector;
 
-@WebServlet(name = "bookServlet", urlPatterns = {"/lab2/zadanie5/bookServlet"})
+@WebServlet(name = "bookServlet", urlPatterns = {"lab2/zadanie5/book"})
 public class bookServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request,response);

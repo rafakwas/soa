@@ -1,10 +1,4 @@
-package com.agh.edu.pl.soa.lab1.zadanie2;
-
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
+package com.agh.edu.pl.soa.lab2.zadanie2;
 
 public class Zadanie2Model {
     String player;

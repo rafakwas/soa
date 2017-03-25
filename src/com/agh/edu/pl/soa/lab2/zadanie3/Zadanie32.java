@@ -1,6 +1,5 @@
-package com.agh.edu.pl.soa.lab1.zadanie3;
+package com.agh.edu.pl.soa.lab2.zadanie3;
 
-import javax.print.attribute.standard.PrinterURI;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,7 +13,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 
-@WebServlet(name = "/zadanie32")
+@WebServlet(name = "zadanie32", urlPatterns = {"lab2/zadanie32"})
 public class Zadanie32 extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         doGet(request,response);

@@ -1,12 +1,11 @@
-package com.agh.edu.pl.soa.lab1.zadanie5;
+package com.agh.edu.pl.soa.lab2.zadanie5;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
 import java.io.IOException;
-import java.io.PrintWriter;
 
-@WebServlet(name = "logoutServlet")
+@WebServlet(name = "logoutServlet", urlPatterns = {"lab2/zadanie5/logout"})
 public class logoutServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

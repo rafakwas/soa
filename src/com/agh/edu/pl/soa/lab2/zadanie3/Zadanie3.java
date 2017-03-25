@@ -1,4 +1,4 @@
-package com.agh.edu.pl.soa.lab1.zadanie3;
+package com.agh.edu.pl.soa.lab2.zadanie3;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -11,7 +11,7 @@ import java.util.Enumeration;
 import java.util.LinkedList;
 import java.util.List;
 
-@WebServlet(name = "/zadanie3")
+@WebServlet(name = "zadanie31", urlPatterns = {"lab2/zadanie3"})
 public class Zadanie3 extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 

@@ -1,4 +1,4 @@
-<%@ page import="com.agh.edu.pl.soa.lab1.zadanie6.EkspertPiwny" %>
+<%@ page import="com.agh.edu.pl.soa.lab3.zadanie1.EkspertPiwny" %>
 <%@ page import="java.util.List" %><%--
   Created by IntelliJ IDEA.
   User: ralphigi

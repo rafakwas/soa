@@ -1,4 +1,4 @@
-package com.agh.edu.pl.soa.lab1.zadanie2;
+package com.agh.edu.pl.soa.lab2.zadanie2;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletResponse;
