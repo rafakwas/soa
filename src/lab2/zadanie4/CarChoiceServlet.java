@@ -1,6 +1,6 @@
-package com.agh.edu.pl.soa.lab2.zadanie4;
+package lab2.zadanie4;
 
-import com.agh.edu.pl.soa.lab2.zadanie4.car.CarChoiceHelper;
+import lab2.zadanie4.car.CarChoiceHelper;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

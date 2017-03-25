@@ -1,4 +1,4 @@
-package com.agh.edu.pl.soa.lab2.zadanie2;
+package lab2.zadanie2;
 
 public class Zadanie2Model {
     String player;

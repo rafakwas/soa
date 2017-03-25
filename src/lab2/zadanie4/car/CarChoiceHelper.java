@@ -1,4 +1,4 @@
-package com.agh.edu.pl.soa.lab2.zadanie4.car;
+package lab2.zadanie4.car;
 
 import java.util.HashMap;
 import java.util.List;

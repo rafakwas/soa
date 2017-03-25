@@ -1,4 +1,4 @@
-package com.agh.edu.pl.soa.lab2.zadanie5;
+package lab2.zadanie5;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

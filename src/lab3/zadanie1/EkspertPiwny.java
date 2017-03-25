@@ -1,4 +1,4 @@
-package com.agh.edu.pl.soa.lab3.zadanie1;
+package lab3.zadanie1;
 
 import java.util.*;
 import java.util.stream.Collectors;
