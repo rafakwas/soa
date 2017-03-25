@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="HelloWorldWebApplicationSecondAttempt:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/HelloWorldWebApplicationSecondAttempt_war</output-path>
+    <root id="archive" name="HelloWorldWebApplicationSecondAttempt_war.war">
+      <element id="artifact" artifact-name="HelloWorldWebApplicationSecondAttempt:war exploded" />
+    </root>
+  </artifact>
+</component>

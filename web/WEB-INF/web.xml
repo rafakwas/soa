@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <servlet>
+        <servlet-name>
+            HelloServlet
+        </servlet-name>
+        <servlet-class>
+            com.agh.edu.pl.soa.lab1.zadanie1.TestServlet
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HelloServlet</servlet-name>
+        <url-pattern>/zadanie1</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Zadanie2</servlet-name>
+        <servlet-class>com.agh.edu.pl.soa.lab1.zadanie2.Zadanie2</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Zadanie2</servlet-name>
+        <url-pattern>/zadanie2</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Zadanie3</servlet-name>
+        <servlet-class>com.agh.edu.pl.soa.lab1.zadanie3.Zadanie3</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Zadanie3</servlet-name>
+        <url-pattern>/zadanie3</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>Zadanie32</servlet-name>
+        <servlet-class>com.agh.edu.pl.soa.lab1.zadanie3.Zadanie32</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Zadanie32</servlet-name>
+        <url-pattern>/zadanie32</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>CarChoiceServlet</servlet-name>
+        <servlet-class>com.agh.edu.pl.soa.lab1.zadanie4.CarChoiceServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>CarChoiceServlet</servlet-name>
+        <url-pattern>/zadanie4</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>loginServlet</servlet-name>
+        <servlet-class>com.agh.edu.pl.soa.lab1.zadanie5.loginServlet</servlet-class>
+        <init-param>
+            <param-name>login</param-name>
+            <param-value>ralphigi</param-value>
+        </init-param>
+        <init-param>
+            <param-name>password</param-name>
+            <param-value>abc</param-value>
+        </init-param>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>loginServlet</servlet-name>
+        <url-pattern>/zadanie5/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>logoutServlet</servlet-name>
+        <servlet-class>com.agh.edu.pl.soa.lab1.zadanie5.logoutServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>logoutServlet</servlet-name>
+        <url-pattern>/zadanie5/logout</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>bookServlet</servlet-name>
+        <servlet-class>com.agh.edu.pl.soa.lab1.zadanie5.bookServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>bookServlet</servlet-name>
+        <url-pattern>/zadanie5/book</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>WyborPiwa</servlet-name>
+        <servlet-class>com.agh.edu.pl.soa.lab1.zadanie6.WyborPiwa</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>WyborPiwa</servlet-name>
+        <url-pattern>/zadanie6/wyborPiwa </url-pattern>
+    </servlet-mapping>
+</web-app>
