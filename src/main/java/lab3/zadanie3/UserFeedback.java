@@ -34,4 +34,13 @@ public class UserFeedback {
     public void setComment(String comment) {
         this.comment = comment;
     }
+
+    @Override
+    public String toString() {
+        return "UserFeedback{" +
+                "login='" + login + '\'' +
+                ", email='" + email + '\'' +
+                ", comment='" + comment + '\'' +
+                '}';
+    }
 }

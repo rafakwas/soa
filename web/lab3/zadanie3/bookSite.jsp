@@ -2,6 +2,7 @@
 <%@ page import="java.io.PrintWriter" %>
 <%@ page import="java.util.Vector" %>
 <%@ page import="lab3.zadanie3.UserFeedback" %>
+<%@ page import="java.io.FileOutputStream" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -24,14 +25,17 @@
     }
 %>
 
+
+
 <body>
 <b>Please submit your feedback:</b>
-<form method="post" action="/lab3/zadanie3/book">
+<form method="post" action="writeCommentsToFile.jsp">
     Your name: <input type="text" name="login"> <br/>
     Your email: <input type="text" name="email"><br/>
     Comment: <input type="text" name="comment"> <br/>
     <input type="submit" value="Send feedback">
 </form>
+
 <%
     if (application.getAttribute("vector") != null) {
         Vector<UserFeedback> vector = (Vector<UserFeedback>) application.getAttribute("vector");
@@ -42,11 +46,12 @@
     } else {
         out.print("<b> no feedback yet </b>");
     }
-
 %>
 
 <br>
 <a href="/lab3/zadanie3/logout">Logout</a>
+
+
 
 
 </body>
