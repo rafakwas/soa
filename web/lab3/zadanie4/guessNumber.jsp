@@ -23,27 +23,15 @@
 <%
     final HttpSession httpSession = request.getSession();
     final boolean firstIteration = session.isNew();
-    Integer number = 0;
-//    Integer counter = 0;
+    final Integer number;
 
 //    unika rekurencji
     if (firstIteration) {
         number = getRandomNumber(0,100);
-        request.setAttribute("number",number);
-//        request.setAttribute("counter",counter);
+        session.setAttribute("number",number);
     }
     else {
-        try {
-            number = (Integer)request.getAttribute("number");
-        }
-        catch (Exception e) {
-            System.out.println("ERROR 1");
-            System.out.println(e.getMessage());
-        }
-//        counter = Integer.parseInt((String)request.getAttribute("counter"));
-//        counter += 1;
-//        request.setAttribute("counter",counter.toString());
-
+        number = (Integer)httpSession.getAttribute("number");
     }
 
     final String guessString = request.getParameter("guess");
