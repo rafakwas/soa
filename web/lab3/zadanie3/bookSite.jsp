@@ -1,7 +1,7 @@
-<%@ page import="lab2.zadanie5.Validation" %>
+<%@ page import="lab3.zadanie3.Validation" %>
 <%@ page import="java.io.PrintWriter" %>
 <%@ page import="java.util.Vector" %>
-<%@ page import="lab2.zadanie5.UserFeedback" %>
+<%@ page import="lab3.zadanie3.UserFeedback" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>

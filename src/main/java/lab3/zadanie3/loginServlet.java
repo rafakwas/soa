@@ -34,7 +34,7 @@ public class loginServlet extends HttpServlet {
         }
 
         if (Validation.checkUser(login, password)) {
-            Cookie cookie = new Cookie("guestCookie2",login);
+            Cookie cookie = new Cookie("guestCookie",login);
             cookie.setMaxAge(60*2);
             response.addCookie(cookie);
             response.sendRedirect("bookSite.jsp");
