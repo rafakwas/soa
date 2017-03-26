@@ -3,7 +3,10 @@
     <title>Formularz logowania do zadania 5</title>
 </head>
 
+
 <body>
+
+
 <form method="post" action="/lab3/zadanie1">
     Wybór:
     <select name="kolor">
@@ -14,9 +17,23 @@
         <option value="palebrown">Miedziane</option>
     </select>
     <br/>
+    Rok urodzenia:
+    <select id="year" name="year"></select>
     <input type="submit">
     <input type="reset">
 </form>
+
+<script>
+    var start = 1900;
+        var end = new Date().getFullYear();
+        var options = "";
+        for(var year = start ; year <=end; year++){
+            options += "<option>";
+            options += year;
+            options += "</option>"
+        }
+    document.getElementById("year").innerHTML = options;
+</script>
 
 </body>
 </html>

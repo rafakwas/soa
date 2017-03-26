@@ -4,5 +4,11 @@
          xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
          version="3.1">
 
-
+    <!--<ejb-ref>-->
+        <!--<ejb-ref-name>FirstBean</ejb-ref-name>-->
+        <!--<ejb-ref-name>FirstBean</ejb-ref-name>-->
+        <!--<ejb-ref-type>Entity</ejb-ref-type>-->
+        <!--<home>lab3.zadanie2.com.example.model.UserRepoBean</home>-->
+        <!--<remote>lab3.zadanie2.com.example.model.UserRepo</remote>-->
+    <!--</ejb-ref>-->
 </web-app>
