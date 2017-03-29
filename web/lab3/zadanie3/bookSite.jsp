@@ -40,7 +40,15 @@
     if (application.getAttribute("vector") != null) {
         Vector<UserFeedback> vector = (Vector<UserFeedback>) application.getAttribute("vector");
         for (UserFeedback entry : vector) {
-            out.print("<b>" + entry.getLogin() + "</b> (" + entry.getEmail() + ") says </br>");
+            out.print("<b>" + entry.getLogin() + "</b> (" + entry.getEmail() + ") says");
+            %>
+<%
+    long temp = entry.getId();
+    pageContext.setAttribute("id",temp);
+%>
+                <a href="edit.jsp?commentId=${pageContext.getAttribute("id")}">edit</a>
+            <%
+            out.print("<br/>");
             out.println("<t>" + entry.getComment() + "</br>");
         }
     } else {

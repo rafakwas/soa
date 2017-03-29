@@ -21,7 +21,7 @@ public class bookServlet extends HttpServlet {
             getServletContext().setAttribute("vector",new Vector<UserFeedback>());
         }
 
-        UserFeedback userFeedback = new UserFeedback(request.getParameter("login"),request.getParameter("email"),request.getParameter("comment"));
+        UserFeedback userFeedback = new UserFeedback(request.getParameter("login"),request.getParameter("email"),request.getParameter("comment"),System.currentTimeMillis());
 
         Vector<UserFeedback> vector = (Vector<UserFeedback>) getServletContext().getAttribute("vector");
 

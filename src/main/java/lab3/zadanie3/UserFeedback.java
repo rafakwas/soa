@@ -4,11 +4,16 @@ public class UserFeedback {
     private String login;
     private String email;
     private String comment;
+    private long id;
 
-    public UserFeedback(String login, String email, String comment) {
+    public UserFeedback() {
+    }
+
+    public UserFeedback(String login, String email, String comment, long id) {
         this.login = login;
         this.email = email;
         this.comment = comment;
+        this.id = id;
     }
 
     public String getLogin() {
@@ -35,12 +40,37 @@ public class UserFeedback {
         this.comment = comment;
     }
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         return "UserFeedback{" +
                 "login='" + login + '\'' +
                 ", email='" + email + '\'' +
                 ", comment='" + comment + '\'' +
+                ", id='" + id + '\'' +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        UserFeedback that = (UserFeedback) o;
+
+        return id == that.id;
+
+    }
+
+    @Override
+    public int hashCode() {
+        return (int) (id ^ (id >>> 32));
     }
 }
