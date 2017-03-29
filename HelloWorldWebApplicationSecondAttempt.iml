@@ -9,9 +9,7 @@
         <webroots>
           <root url="file://$MODULE_DIR$/web" relative="/" />
         </webroots>
-        <sourceRoots>
-          <root url="file://$MODULE_DIR$/src" />
-        </sourceRoots>
+        <sourceRoots />
       </configuration>
     </facet>
   </component>
@@ -26,8 +24,11 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" scope="PROVIDED" name="JBoss 10.2.0.Final" level="application_server_libraries" />
-    <orderEntry type="library" name="Maven: javax.servlet.jsp.jstl:jstl:1.2" level="project" />
-    <orderEntry type="library" name="Java EE 6-Java EE 6" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="JBoss 10.2.0.Final" level="application_server_libraries" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Java EE 6-Java EE 6" level="project" />
+    <orderEntry type="library" exported="" scope="PROVIDED" name="Maven: javax.servlet.jsp.jstl:jstl:1.2" level="project" />
+    <orderEntry type="library" exported="" name="Maven: javax.servlet.jsp.jstl:javax.servlet.jsp.jstl-api:1.2.1" level="project" />
+    <orderEntry type="library" exported="" name="Maven: taglibs:c:1.1.2" level="project" />
+    <orderEntry type="library" exported="" name="Maven: taglibs:x:1.1.2" level="project" />
   </component>
 </module>
