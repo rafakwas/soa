@@ -1,8 +1,10 @@
 package lab3.zadanie2.com.example.model;
 
+//import javax.enterprise.context.ApplicationScoped;
 import javax.ejb.Stateless;
 import java.util.ArrayList;
 import java.util.List;
+
 
 @Stateless
 public class UserRepoBean implements UserRepo {

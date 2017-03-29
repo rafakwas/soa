@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<computer_parts>
+    <part id="1">
+        <name>Intel Core i7 3790x</name>
+        <price>980</price>
+    </part>
+
+    <part id="2">
+        <name>Monitor LCD</name>
+        <price>1200</price>
+    </part>
+</computer_parts>

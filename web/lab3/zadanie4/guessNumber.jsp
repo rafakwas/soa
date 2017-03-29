@@ -24,15 +24,18 @@
     final HttpSession httpSession = request.getSession();
     final boolean firstIteration = session.isNew();
     final Integer number;
+    Integer counter = 0;
 
 //    unika rekurencji
     if (firstIteration) {
         number = getRandomNumber(0,100);
-        session.setAttribute("number",number);
+        counter = 0;
     }
     else {
-        number = (Integer)httpSession.getAttribute("number");
+        number = Integer.parseInt((String)request.getParameter("number"));
+        counter = Integer.parseInt((String)request.getParameter("counter")) + 1;
     }
+
 
     final String guessString = request.getParameter("guess");
     int guess = 0;
@@ -42,8 +45,10 @@
 %>
     <body>
     First iteration: </br>
-    <form method="post">
+    <form method="get">
         Liczba: <input type="text" name="guess"></br>
+        <input type="hidden" name="number" value="<%=number%>" />
+        <input type="hidden" name="counter" value="<%=counter%>" />
         <input type="submit">
     </form>
     </body>
@@ -65,6 +70,9 @@
             <%= message %>
 <%
 } else {
+    if (number == null) {
+        System.out.println("number jest nullem!");
+    }
     if (guess != number.intValue()) {
         // komunikat
         if (guess < number.intValue()) {
@@ -76,7 +84,7 @@
     }
     else {
         // wygrana
-        message = "Brawo, zgadła(e)ś po próbach.";
+        message = "Brawo, zgadła(e)ś po " + counter + " próbach.";
     }
 
 %>
@@ -86,8 +94,10 @@
 %>
 <body>
 Next iterations: </br>
-<form method="post">
+<form method="get">
     Liczba: <input type="text" name="guess"></br>
+    <input type="hidden" name="number" value="<%=number%>" />
+    <input type="hidden" name="counter" value="<%=counter%>" />
     <input type="submit">
 </form>
 </body>
@@ -108,7 +118,6 @@ Next iterations: </br>
 
 
 }
-
 
 %>
 
