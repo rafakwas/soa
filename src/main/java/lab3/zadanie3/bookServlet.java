@@ -29,7 +29,7 @@ public class bookServlet extends HttpServlet {
 
         getServletContext().setAttribute("vector",vector);
 
-        response.sendRedirect("bookSite.jsp");
+        response.sendRedirect("/lab3/zadanie3/writeCommentsToFile.jsp");
 
     }
 }

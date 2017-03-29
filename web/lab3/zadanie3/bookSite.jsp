@@ -29,7 +29,7 @@
 
 <body>
 <b>Please submit your feedback:</b>
-<form method="post" action="writeCommentsToFile.jsp">
+<form method="post" action="/lab3/zadanie3/book">
     Your name: <input type="text" name="login"> <br/>
     Your email: <input type="text" name="email"><br/>
     Comment: <input type="text" name="comment"> <br/>
@@ -37,6 +37,8 @@
 </form>
 
 <%
+
+
     if (application.getAttribute("vector") != null) {
         Vector<UserFeedback> vector = (Vector<UserFeedback>) application.getAttribute("vector");
         for (UserFeedback entry : vector) {

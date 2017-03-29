@@ -1,7 +1,7 @@
 <%@ page import="java.io.*" %>
 <%@ page import="java.util.Vector" %>
-<%@ page import="lab3.zadanie2.com.example.model.User" %>
-<%@ page import="java.util.Collection" %><%--
+<%@ page import="java.util.Collection" %>
+<%@ page import="lab3.zadanie3.UserFeedback" %><%--
   Created by IntelliJ IDEA.
   User: ralphigi
   Date: 26.03.17
@@ -17,18 +17,29 @@
 
 
 <%!
-    public static void writeToFile(Collection<User> collection) {
+    public static void writeToFile(Collection<UserFeedback> collection) {
         BufferedWriter bw = null;
         FileWriter fw = null;
 
-        String str = collection.toString();
+        StringBuilder stringBuilder = new StringBuilder();
+        for(UserFeedback user: collection) {
+            stringBuilder.append(user.getLogin());
+            stringBuilder.append(";");
+            stringBuilder.append(user.getComment());
+            stringBuilder.append(";");
+            stringBuilder.append(user.getEmail());
+            stringBuilder.append(";");
+            stringBuilder.append(user.getId());
+            stringBuilder.append("\n");
+
+        }
         String path = "/home/ralphigi/Dokumenty/soa/lab3/zadanie3Comments.txt";
 
         try {
 
             fw = new FileWriter(path,false);
             bw = new BufferedWriter(fw);
-            bw.append(str);
+            bw.append(stringBuilder.toString());
 
             System.out.println("written");
 
@@ -67,11 +78,9 @@
 
 <%
     if (application.getAttribute("vector") != null) {
-        writeToFile((Vector<User>)application.getAttribute("vector"));
+        writeToFile((Vector<UserFeedback>)application.getAttribute("vector"));
     }
-    RequestDispatcher rd = request.getRequestDispatcher("/lab3/zadanie3/book");
-    rd.forward(request, response);
-
+    response.sendRedirect("bookSite.jsp");
 %>
 
 </body>
