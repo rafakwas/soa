@@ -1,11 +1,5 @@
 <%@ page import="java.io.PrintWriter" %>
-<%@ page import="java.util.Random" %><%--
-  Created by IntelliJ IDEA.
-  User: ralphigi
-  Date: 26.03.17
-  Time: 19:00
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="java.util.Random" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -14,16 +8,18 @@
 
 <%!
     private static int getRandomNumber(int min, int max) {
-        Random random = new Random(47);
+        Random random = new Random();
         return min+random.nextInt(max+1);
     }
 %>
 
-
 <%
-    final HttpSession httpSession = request.getSession();
-    final boolean firstIteration = session.isNew();
-    final Integer number;
+    if(request.getParameter("again") != null) {
+        session.invalidate();
+    }
+    HttpSession httpSession = request.getSession(true);
+    boolean firstIteration = httpSession.isNew();
+    Integer number;
     Integer counter = 0;
 
 //    unika rekurencji
@@ -84,7 +80,9 @@
     }
     else {
         // wygrana
-        message = "Brawo, zgadła(e)ś po " + counter + " próbach.";
+        message = "Brawo, zgadła(e)ś po " + counter + " próbach. Spróbuj "; %>
+        <a href="guessNumber.jsp?again=1">raz jeszcze</a>
+    <%
     }
 
 %>
