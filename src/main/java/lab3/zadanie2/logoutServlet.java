@@ -19,7 +19,6 @@ public class logoutServlet extends HttpServlet {
     @EJB
     UserRepo userRepo;
 
-
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 
@@ -49,6 +48,5 @@ public class logoutServlet extends HttpServlet {
 
         response.sendRedirect("/lab3/zadanie2/form.jsp");
 
-//        request.getRequestDispatcher("/lab3/zadanie2/form.jsp").include(request,response);
     }
 }

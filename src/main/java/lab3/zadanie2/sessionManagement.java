@@ -49,7 +49,10 @@ public class sessionManagement extends HttpServlet {
             System.out.println(tempo.getList());
 
             getServletContext().getRequestDispatcher("/lab3/zadanie2/form.jsp").forward(request,response);
-
+        }
+        else {
+            out.print("Bledny login/haslo");
+            getServletContext().getRequestDispatcher("/lab3/zadanie2/form.jsp").include(request,response);
         }
 
     }

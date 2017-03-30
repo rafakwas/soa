@@ -34,7 +34,7 @@
         FileReader fr = null;
 
         Vector<UserFeedback> vector = new Vector<>();
-        String path = "/home/ralphigi/Dokumenty/soa/lab3/zadanie3Comments.txt";
+        String path = "komentarze.txt";
 
         try {
 
@@ -102,10 +102,10 @@
         for (UserFeedback entry : vector) {
             out.print("<b>" + entry.getLogin() + "</b> (" + entry.getEmail() + ") says");
             %>
-<%
-    long temp = entry.getId();
-    pageContext.setAttribute("id",temp);
-%>
+            <%
+                long temp = entry.getId();
+                pageContext.setAttribute("id",temp);
+            %>
                 <a href="edit.jsp?commentId=${pageContext.getAttribute("id")}">edit</a>
             <%
             out.print("<br/>");

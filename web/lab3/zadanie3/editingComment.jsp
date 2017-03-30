@@ -27,15 +27,15 @@
             for(UserFeedback user: collection) {
                 stringBuilder.append(user.getLogin());
                 stringBuilder.append(";");
-                stringBuilder.append(user.getComment());
-                stringBuilder.append(";");
                 stringBuilder.append(user.getEmail());
+                stringBuilder.append(";");
+                stringBuilder.append(user.getComment());
                 stringBuilder.append(";");
                 stringBuilder.append(user.getId());
                 stringBuilder.append("\n");
 
             }
-            String path = "/home/ralphigi/Dokumenty/soa/lab3/zadanie3Comments.txt";
+            String path = "komentarze.txt";
 
             try {
 

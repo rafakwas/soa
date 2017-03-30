@@ -8,9 +8,9 @@ public class Validation {
 
     static {
         accounts = new HashMap<>();
-        accounts.put("ralphigi","abc");
-        accounts.put("rafal","def");
-        accounts.put("kwasnik","hgj");
+        accounts.put("a","a");
+        accounts.put("b","b");
+        accounts.put("c","c");
     }
 
     public static boolean checkUser(String login, String password) {
