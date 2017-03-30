@@ -3,6 +3,8 @@
 <%@ page import="java.util.Vector" %>
 <%@ page import="lab3.zadanie3.UserFeedback" %>
 <%@ page import="java.io.FileOutputStream" %>
+<%@ page import="java.io.BufferedReader" %>
+<%@ page import="java.io.FileReader" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
@@ -26,6 +28,62 @@
 %>
 
 
+<%!
+    public static Vector<UserFeedback> readFromFile() {
+        BufferedReader br = null;
+        FileReader fr = null;
+
+        Vector<UserFeedback> vector = new Vector<>();
+        String path = "/home/ralphigi/Dokumenty/soa/lab3/zadanie3Comments.txt";
+
+        try {
+
+            fr = new FileReader(path);
+            br = new BufferedReader(fr);
+
+            String sCurrentLine;
+
+            while ((sCurrentLine = br.readLine()) != null) {
+                System.out.println(sCurrentLine);
+                String[] splitter = sCurrentLine.split(";");
+                UserFeedback userFeedback = new UserFeedback(splitter[0],splitter[1],splitter[2],Long.parseLong(splitter[3]));
+                vector.add(userFeedback);
+            }
+
+            System.out.println("read");
+
+        } catch (Exception e) {
+
+            System.out.println(e.getMessage());
+
+        } finally {
+
+            try {
+
+                if (br != null)
+                    br.close();
+
+                if (fr != null)
+                    fr.close();
+
+            } catch (Exception ex) {
+
+                System.out.println(ex.getMessage());
+
+            }
+
+        }
+
+        return vector;
+    }
+//    StringBuilder stringBuilder = new StringBuilder();
+//    Vector<UserFeedback> vector = (Vector<UserFeedback>) application.getAttribute("vector");
+//    for (UserFeedback entry : vector) {
+//        out.print("<b>" + entry.getLogin() + "</b> (" + entry.getEmail() + ") says </br>");
+//        out.println("<t>" + entry.getComment() + "</br>");
+//    }
+%>
+
 
 <body>
 <b>Please submit your feedback:</b>
@@ -40,7 +98,7 @@
 
 
     if (application.getAttribute("vector") != null) {
-        Vector<UserFeedback> vector = (Vector<UserFeedback>) application.getAttribute("vector");
+        Vector<UserFeedback> vector = readFromFile();
         for (UserFeedback entry : vector) {
             out.print("<b>" + entry.getLogin() + "</b> (" + entry.getEmail() + ") says");
             %>
@@ -57,6 +115,7 @@
         out.print("<b> no feedback yet </b>");
     }
 %>
+
 
 <br>
 <a href="/lab3/zadanie3/logout">Logout</a>

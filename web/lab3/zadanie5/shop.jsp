@@ -15,27 +15,34 @@
 <c:import var="computerParts" url="http://localhost:8080/computer_parts.xml"/>
 
 Koszyk:
+<br/>
 
+<x:parse xml="${computerParts}" var="output"/>
 <%
     for(Map.Entry<Integer,Integer> entry : cartBean.getCart().entrySet()) {
         %>
-        <%= entry.getKey() %> <%= entry.getValue() %>
+        <c:set var="partId">
+            <%=entry.getKey()%>
+        </c:set>
+
+        <x:out select="$output/computer_parts/part[$partId]"/>: <%= entry.getValue() %> sztuk
+
         <br/>
         <%
     }
+
 %>
 
 
 
 <form action="managment.jsp">
     <select name="partId">
-        <x:parse xml="${computerParts}" var="output"/>
         <x:forEach select="$output/computer_parts/part" var="part">
             <option value=<x:out select="$part/@id"/>> id:<x:out select="$part/@id"/> nazwa : <x:out select="$part/name"/>  cena:  <x:out select="$part/price"/> </option>
         </x:forEach>
     </select>
     <br/>
-    <input type="text" placeholder="1" name="amount">
+    Podaj liczbę dodawanych/odejmowanych produktów: <input type="text" name="amount">
     <br/>
     <input type="submit" name="action" value="add">
     <input type="submit" name="action" value="remove">

@@ -2,6 +2,9 @@
 <%@ tag import="javax.annotation.Resource" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<%@ attribute name="value" required="true" %>
+<%@ attribute name="incomeCurrency" required="false" %>
+<%@ attribute name="outcomeCurrency" required="false" %>
 
 <%!
     public static Double calculate(Double value, String incomeCurrency, String outcomeCurrency) {
@@ -13,4 +16,5 @@
         return (outcomeCourse/incomeCourse)*value;
     }
 %>
-<%= calculate(10.0,"EUR","USD") %>
+
+<%= calculate(Double.parseDouble(value),incomeCurrency,outcomeCurrency) %>

@@ -13,6 +13,6 @@
 <ct:form></ct:form>
 </br>
 <ct:sort increasing="0" color="red"></ct:sort>
-<dev:formattingTag header="NAGLOWEK" adjust="left" color="yellow">HELLO</dev:formattingTag>
-<ct:currency></ct:currency>
+<dev:formattingTag header="FORMATTING TAG" adjust="right" color="red">AUTORA WITAM, O POGODĘ PYTAM</dev:formattingTag>
+<ct:currency value="20.0" incomeCurrency="EUR" outcomeCurrency="CHF"></ct:currency>
 
