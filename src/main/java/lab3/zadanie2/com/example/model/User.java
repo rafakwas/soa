@@ -1,8 +1,10 @@
 package lab3.zadanie2.com.example.model;
 
+import java.text.DateFormat;
+
 public class User implements Comparable<User>{
     private String login;
-    private long time;
+    private String time;
 
     public String getLogin() {
         return login;
@@ -12,17 +14,17 @@ public class User implements Comparable<User>{
         this.login = login;
     }
 
-    public long getTime() {
+    public String getTime() {
         return time;
     }
 
-    public void setTime(long time) {
+    public void setTime(String time) {
         this.time = time;
     }
 
     @Override
     public int compareTo(User o) {
-        return login.compareTo(o.getLogin());
+        return time.compareTo(o.getTime());
     }
 
     @Override
